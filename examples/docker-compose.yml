@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  wiki:
+    image: miyabisun/gitlab-preview:latest
+    links:
+      - plantuml
+    ports:
+      - 4000:80
+      - 4002:8080
+    volumes:
+      - .:/work
+  plantuml:
+    image: plantuml/plantuml-server:latest
+    ports:
+      - 4001:8080
+

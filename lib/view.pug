@@ -1,0 +1,10 @@
+doctype html
+head
+  link(rel="stylesheet" media="all" href="/style.css")
+  script(type="text/javascript" src="/script.js")
+body
+  ul.summary
+    each page in pages
+      li: a(href="/" + page)= page
+  .wiki!= variable
+

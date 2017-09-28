@@ -1,0 +1,8 @@
+#!/usr/bin/env nod
+const httpServer = require('../lib/http-server.js')
+const wsServer = require('../lib/ws-server.js')
+
+const https = httpServer()
+const wss = wsServer()
+
+console.info('Get ready...')
